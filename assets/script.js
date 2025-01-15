@@ -1,3 +1,10 @@
+let bannerImg = document.querySelector(".banner-img");
+let dots = document.querySelector(".dots");
+let tagName = document.getElementById("tag_name");
+let dot = ` 
+<p class = dot></p>
+`;
+
 const slides = [
   {
     image: "slide1.jpg",
@@ -18,27 +25,11 @@ const slides = [
   },
 ];
 
-let bannerImg = document.querySelector(".banner-img");
-
-//gestion des points
-let dots = document.querySelector(".dots");
-
-let dot = ` 
-<p class = dot></p>
-`;
-
-let dotList = [];
 for (let i = 0; i < slides.length; i++) {
   dots.innerHTML += dot;
 }
 
 let myDot = document.querySelectorAll(".dot");
-console.log(dotList);
-console.log(myDot);
-
-let tagName = document.getElementById("tag_name");
-
-//gestion des flèches
 
 j = 0;
 myDot[0].classList.add("dot_selected");
